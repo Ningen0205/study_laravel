@@ -23,3 +23,6 @@ Route::get('/chatapp', function(){
 });
 
 Route::post('/chatapp/post',[PostController::class, 'store']);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
